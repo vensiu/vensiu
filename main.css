@@ -111,3 +111,43 @@ h1, h4, h3{
   padding-bottom: 60px;
   padding-top: 30px;
 }
+
+@media (max-width: 600px){
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    padding-top: 50px;
+    margin: 0 auto;
+  }
+
+  .boxes {
+    width: 100%;
+    margin-bottom: 25px;
+    background-color: #EBEBEB;
+    display: inline-block;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+
+  .qp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    padding-top: 50px;
+    margin: 0 auto;
+  }
+  .quote {
+    width: 100%;
+    max-height: 100vh;
+    display: inline-block;
+  }
+  .pershkrim {
+    font-weight: 150;
+    text-align: justify;
+    width: 100%;
+    max-height: 100vh;
+    display: inline-block;
+  }
+}
