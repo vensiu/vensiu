@@ -113,7 +113,10 @@ h1, h4, h3{
   padding-top: 30px;
 }
 
-@media (max-width: 600px){
+@media screen and (max-width: 600px){
+  .topnav {
+    visibility: hidden;
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -122,7 +125,6 @@ h1, h4, h3{
     padding-top: 50px;
     margin: 0 auto;
   }
-
   .boxes {
     width: 100%;
     margin-bottom: 25px;
@@ -137,7 +139,7 @@ h1, h4, h3{
     justify-content: space-between;
     width: 90%;
     padding-top: 50px;
-    margin: 0 auto;
+    margin-top: -100px;
   }
   .quote {
     width: 100%;
