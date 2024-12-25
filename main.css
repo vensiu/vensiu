@@ -82,6 +82,7 @@ h1, h4, h3{
 }
 .pershkrim {
   font-weight: 150;
+  text-align: justify;
   width: 50%;
   max-height: 100vh;
   display: inline-block;
