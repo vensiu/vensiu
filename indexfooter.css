@@ -1,0 +1,47 @@
+/* Footer Styles – Notere Valbona Hajdari */
+
+.footer {
+  background-color: #133951;
+  color: #C7B273;
+  text-align: center;
+  padding: 8px 0;                 /* slimmer height */
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 60px;
+  border: none;
+}
+
+.footer a {
+  color: #C7B273;
+  text-decoration: none;
+  padding: 0 8px;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.footer a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.footer p {
+  margin: 3px 0;
+}
+
+/* Ensure footer hugs bottom with no white gap */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: white;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.footer {
+  margin-top: auto;
+}

@@ -1,57 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="indexnav.css">
+    <link rel="stylesheet" href="indexmain.css">
+    <link rel="stylesheet" href="indexfooter.css">
     <link rel="icon" type="image/png" href="title_icon.png">
     <title>Notere Valbona Hajdari</title>
 </head>
 <body>
-    <div class="topcontact">
-        <a href="tel:+355693032291"> TEL: +355 69 303 2291</a>
-        <a href="mailto:valbonafishta@yahoo.com">EMAIL: VALBONAFISHTA@YAHOO.COM</a>
-      </div>
-    <div class="topnav">
-        <a><img src="logo_icon.png" alt="Italian Trulli" width="80px" height="80px"></a>
-      </div>
+    <!-- NAVIGATION BAR -->
+    <header class="navbar">
+        <a href="index.html" class="nav-brand">
+            <img src="logo_icon.png" alt="Notere Valbona Hajdari">
+            <span>Notere Valbona Hajdari</span>
+        </a>
+
+        <!-- mobile toggle -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-burger">
+            <span></span><span></span><span></span>
+        </label>
+
+        <nav class="nav-links">
+            <a href="index.html" class="active">Kryefaqe</a>
+            <a href="#sherbimet">Shërbimet</a>
+            <a href="#rreth-nesh">Rreth Nesh</a>
+            <a href="kontakt.html" class="nav-cta">Kontakt</a>
+        </nav>
+    </header>
+
+    <!-- HERO / QUOTE SECTION -->
     <div class="qp">
-    <div class="quote">
-        <p id="small"> Q Ë L L I M I</p>
-        <h1 id="mega">Korrektësi & Siguri</h1>
-        <h4 id="author">- Ken Salazar</h6>
+        <div class="quote">
+            <p id="small">Q Ë L L I M I</p>
+            <h1 id="mega">Korrektësi &amp; Siguri</h1>
+            <h4 id="author">- Ken Salazar</h4>
+        </div>
+        <div class="pershkrim">
+            <p>
+                Notere <b>Valbona Hajdari (Fishta)</b> ka një përvojë mbi 25 vite në ofrimin e shërbimeve dhe akteve noteriale,
+                bazuar në korrektësi, besnikëri dhe standarde të larta etike. Zyra jonë është e
+                specializuar në një numër shërbimesh ligjore, duke përfshirë përgatitjen dhe
+                noterizimin e dokumenteve zyrtare, kontratave të ndryshme, trashëgimisë
+                ligjore, testamenteve, autorizimeve dhe aktmarrëveshjeve, duke siguruar që
+                çdo proces të jetë në përputhje me ligjet në fuqi. Përkushtimi ndaj
+                transparencës dhe cilësisë më ka bërë një profesioniste të besuar për
+                individë, biznese dhe institucione që kërkojnë një shërbim të nivelit të lartë.
+            </p>
+        </div>
     </div>
-    <div class="pershkrim">
-        <p> Notere <b>Valbona Hajdari (Fishta) </b>ka një përvojë mbi 25 vite në ofrimin e shërbimeve dhe akteve noteriale, 
-            bazuar në korrektësi, besnikëri dhe standarde të larta etike. Zyra jonë është e 
-            specializuar në një numër shërbimesh ligjore, duke përfshirë përgatitjen dhe 
-            noterizimin e dokumenteve zyrtare, kontratave të ndryshme, trashëgimisë 
-            ligjore, testamenteve, autorizimeve dhe aktmarrëveshjeve, duke siguruar që 
-            çdo proces të jetë në përputhje me ligjet në fuqi. Përkushtimi ndaj 
-            transparencës dhe cilësisë më ka bërë një profesioniste të besuar për 
-            individë, biznese dhe institucione që kërkojnë një shërbim të nivelit të lartë.</p>
-    </div>
-    </div>
-    <div class="container">
+
+    <!-- SERVICES -->
+    <div class="container" id="sherbimet">
         <div class="boxes">
             <div class="cont">
-            <h3>Kontrata të Ndryshme</h3>
-            <p> Ekspertizë në hartimin dhe verifikimin e kontratave duke përfshirë shitblerje, dhurime, qira si dhe kontrata të tjera.  Sigurojmë që çdo kontratë të jetë e qartë, ligjërisht e vlefshme.</p>
-            </div>
-        </div>
-        <div class="boxes">
-            <div class="cont">  
-            <h3>Akte Trashëgimie </h3>
-            <p>Sherbimet tona garantojnë që proceset e trashëgimisë të jenë në përputhje me ligjin, efikase dhe transparente. Ne ofrojmë shërbime të besueshme dhe profesionale.</p>
+                <h3>Kontrata të Ndryshme</h3>
+                <p>Ekspertizë në hartimin dhe verifikimin e kontratave duke përfshirë shitblerje, dhurime, qira si dhe kontrata të tjera. Sigurojmë që çdo kontratë të jetë e qartë, ligjërisht e vlefshme.</p>
             </div>
         </div>
         <div class="boxes">
             <div class="cont">
-            <h3>Të Tjera</h3>
-            <p>Shërbimet tona mbulojnë një gamë të gjerë, duke përfshirë noterizimin e dokumenteve, deklarata, përkthime si dhe akte ose shërbime të tjera noteriale.    </p>
+                <h3>Akte Trashëgimie</h3>
+                <p>Shërbimet tona garantojnë që proceset e trashëgimisë të jenë në përputhje me ligjin, efikase dhe transparente. Ne ofrojmë shërbime të besueshme dhe profesionale.</p>
+            </div>
+        </div>
+        <div class="boxes">
+            <div class="cont">
+                <h3>Të Tjera</h3>
+                <p>Shërbimet tona mbulojnë një gamë të gjerë, duke përfshirë noterizimin e dokumenteve, deklarata, përkthime si dhe akte ose shërbime të tjera noteriale.</p>
             </div>
         </div>
     </div>
+
+    <!-- PLACEHOLDER SECTIONS FOR NAVIGATION -->
+    <div id="tarifat" style="height:100px;"></div>
+    <div id="rreth-nesh" style="height:100px;"></div>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="kontakt">
+        <p>
+            <a href="tel:+355693032291">TEL: +355 69 303 2291</a> |
+            <a href="mailto:valbonafishta@yahoo.com">EMAIL: VALBONAFISHTA@YAHOO.COM</a>
+        </p>
+        <p>&copy; 2025 Notere Valbona Hajdari</p>
+    </footer>
 </body>
 </html>
