@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+
+/* ===== BASE ===== */
+:root{
+  --gutter: clamp(100px, 14vw, 180px);   /* ⬅️ closer to the center */
+  --gold: #C7B273;
+  --box-bg: #EBEBEB;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: white url(background_image.png) center / cover no-repeat;
+  color: black;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Wrapper */
+.timeline-wrap {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 60px 0 40px;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.timeline-container {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-family: "Kaisei Decol", serif;
+  margin: 0 0 24px;
+  font-size: 32px;
+  color: black;
+}
+
+/* ===== TIMELINE ===== */
+.timeline {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline li {
+  position: relative;
+  margin: 24px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Card styling */
+.timeline .content {
+  position: relative;
+  background-color: var(--box-bg);
+  border-radius: 0;
+  box-shadow:
+    rgba(50,50,93,0.25) 0 13px 27px -5px,
+    rgba(0,0,0,0.3) 0 8px 16px -8px;
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.5;
+  color: black;
+  width: clamp(300px, 42%, 500px);
+}
+
+/* Closer to center */
+.timeline li.left  .content { margin-right: var(--gutter); margin-left: auto; }
+.timeline li.right .content { margin-left:  var(--gutter); margin-right: auto; }
+
+/* Dots + connectors */
+.timeline .content::before,
+.timeline .content::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* LEFT cards */
+.timeline li.left .content::before {
+  right: -12px;
+  width: 10px; height: 10px;
+  background: var(--gold);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 4px rgba(199,178,115,0.18),
+    0 0 12px rgba(199,178,115,0.32);
+}
+.timeline li.left .content::after {
+  right: -38px;          /* shortened slightly */
+  width: 26px; height: 2px;
+  background: var(--gold);
+}
+
+/* RIGHT cards */
+.timeline li.right .content::before {
+  left: -12px;
+  width: 10px; height: 10px;
+  background: var(--gold);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 4px rgba(199,178,115,0.18),
+    0 0 12px rgba(199,178,115,0.32);
+}
+.timeline li.right .content::after {
+  left: -38px;
+  width: 26px; height: 2px;
+  background: var(--gold);
+}
+
+/* Typography */
+.timeline h5 {
+  margin: 0 0 6px;
+  font-family: "Kaisei Decol", serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #133951;
+}
+.timeline p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: justify;
+  font-weight: 300;
+}
+
+/* Hover lift */
+.timeline .content:hover {
+  transform: translateY(-1px);
+  transition: transform .12s ease;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  :root { --gutter: 6%; }
+
+  .timeline-container { max-width: 600px; }
+  .page-title { font-size: 22px; margin-bottom: 16px; }
+
+  .timeline .content {
+    width: 100%;
+    padding: 14px 16px;
+  }
+
+  .timeline li.left  .content,
+  .timeline li.right .content { margin: 0 auto; }
+
+  .timeline li .content::before { left: -12px; right: auto; }
+  .timeline li .content::after  { left: -42px; right: auto; width: 28px; }
+}
