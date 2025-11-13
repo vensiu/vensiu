@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Roboto:ital,wght@0,300;0,400;0,500;0,700&display=swap');
+
+/* -------------------- */
+/* Base Layout & Theme  */
+/* -------------------- */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url("../gallery/background_image.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: scroll;
+  background-color: white;
+  color: black;
+  margin: 0;
+  min-height: 100svh;
+}
+
+/* -------------------- */
+/* Main Container Setup */
+/* -------------------- */
+
+.contact-wrap {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 60px 0;
+  flex: 1 0 auto;
+}
+
+/* --------------------------- */
+/* Two-column content geometry */
+/* --------------------------- */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(340px, 0.9fr) 1.1fr;
+  gap: clamp(40px, 4vw, 70px);
+  align-items: start;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+/* ---------------------- */
+/* Titles & Typography    */
+/* ---------------------- */
+
+.contact-info h2,
+.map-section h2 {
+  font-family: "Kaisei Decol", serif;
+  margin: 0 0 20px;
+  font-size: 36px;
+  color: black;
+  text-align: left;
+}
+
+/* legacy hook */
+#orari {
+  line-height: 0.8;
+}
+
+/* ------------------------ */
+/* List of Contact Details */
+/* ------------------------ */
+
+.info-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.info-list li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 12px;
+  align-items: center;   /* default alignment for all rows */
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.info-list li:last-child {
+  border-bottom: none;
+}
+
+/* ------------------- */
+/* Icons & Their Label */
+/* ------------------- */
+
+.label {
+  font-weight: 600;
+  white-space: nowrap;
+  color: black;
+  display: flex;
+  align-items: center;
+  padding-top: 2px;   /* subtle global icon nudge */
+}
+
+.label img {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+/* ---------------------------------------------- */
+/* Orari — bespoke alignment + refined text space */
+/* ---------------------------------------------- */
+
+.info-list li.orari-row,
+.info-list li.orari-row p {
+    line-height: 1.45 !important;  /* tighter paragraph spacing */
+}
+
+.info-list li.orari-row {
+    align-items: flex-start !important;  /* icon aligns with first line */
+}
+
+.info-list li.orari-row .label {
+    padding-top: 1px;    /* micro-tune icon verticality */
+    align-items: flex-start !important;
+}
+
+.info-list li.orari-row .label img {
+    margin-top: 0px;     /* eliminate any drift */
+}
+
+/* ---------------------------- */
+/* Clean Always-Black Link Look */
+/* ---------------------------- */
+
+.info-list a {
+  color: black;
+  text-decoration: none;
+}
+
+.info-list a:hover,
+.info-list a:focus,
+.info-list a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+/* --------------------- */
+/* Google Maps Container */
+/* --------------------- */
+
+.map-wrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 60%;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 10px 25px -10px;
+}
+
+.map-iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ----------------------- */
+/* Mobile Adaptation Layer */
+/* ----------------------- */
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    text-align: left;
+    gap: 30px;
+    max-width: 600px;
+  }
+
+  .contact-info h2,
+  .map-section h2 {
+    font-size: 22px;
+  }
+
+  .info-list {
+    font-size: 18px;
+  }
+}
+
+/* ---------------------------------------- */
+/* Vertical Centering for the Whole Page    */
+/* ---------------------------------------- */
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;      /* center vertically */
+    justify-content: center;  /* center horizontally */
+    padding: 60px 0;
+}

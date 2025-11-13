@@ -1,28 +1,58 @@
 <!DOCTYPE html>
 <html lang="sq">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="title_icon.png" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="language" content="sq-AL">
 
-  <!-- Shared styles -->
-  <link rel="stylesheet" href="indexnav.css" />
-  <link rel="stylesheet" href="indexfooter.css" />
-  <!-- Page-specific -->
-  <link rel="stylesheet" href="kontakt.css" />
+  <!-- ------------------------------- -->
+  <!-- Global style architecture layer -->
+  <!-- ------------------------------- -->
+  <link rel="stylesheet" href="styles/indexnav.css">
+  <link rel="stylesheet" href="styles/indexmain.css">
+  <link rel="stylesheet" href="styles/indexfooter.css">
 
-  <title>Kontakt — Notere Valbona Hajdari</title>
+  <!-- ----------------------------------- -->
+  <!-- Page-specific CSS (isolated scope) -->
+  <!-- ----------------------------------- -->
+  <link rel="stylesheet" href="styles/kontakt.css">
+
+  <title>Kontakt – Notere Valbona Hajdari</title>
+  <meta name="description" content="Detajet e kontaktit dhe vendndodhja e Zyrës Noteriale Valbona Hajdari.">
+  <meta name="author" content="Zyra Noteriale Valbona Hajdari">
+  <link rel="icon" type="image/png" href="gallery/title_icon.png">
 </head>
 <body>
-  <!-- NAVBAR -->
+
+  <!-- ------------------ -->
+  <!-- Top utility ribbon -->
+  <!-- ------------------ -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <a href="tel:+355693032291">+355 69 303 2291</a>
+      <span>•</span>
+      <a href="mailto:valbonafishta@yahoo.com">valbonafishta@yahoo.com</a>
+    </div>
+
+    <nav class="topbar-right">
+      <a href="https://maps.app.goo.gl/dBH3G5dkr7PY3jg96">Vendndodhja</a>
+      <a href="#orari">Orari</a>
+      <a href="downloads.html">Downloads</a>
+    </nav>
+  </div>
+
+  <!-- ------------------------------- -->
+  <!-- NAVBAR: branding + navigation   -->
+  <!-- ------------------------------- -->
   <header class="navbar">
     <a href="index.html" class="nav-brand">
-      <img src="logo_icon.png" alt="Notere Valbona Hajdari" />
+      <img src="gallery/logo_icon.png" alt="Notere Valbona Hajdari">
       <span>Notere Valbona Hajdari</span>
     </a>
 
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <!-- Mobile menu trigger -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <label for="nav-toggle" class="nav-burger">
       <span></span><span></span><span></span>
     </label>
@@ -30,60 +60,85 @@
     <nav class="nav-links">
       <a href="index.html">Kryefaqe</a>
       <a href="index.html#sherbimet">Shërbimet</a>
-      <a href="rrethnesh.html">Rreth Nesh</a>
-      <a href="kontakt.html" class="active">Kontakt</a>
+      <a href="rrethnesh.html">Rreth nesh</a>
+      <a href="kontakt.html" class="active nav-cta">Kontakt</a>
     </nav>
   </header>
 
-  <!-- CONTENT -->
+  <!-- ---------------------------------- -->
+  <!-- Centralized contact content module -->
+  <!-- ---------------------------------- -->
   <main class="contact-wrap">
     <section class="contact-grid">
-      <!-- Left info -->
+
+      <!-- ----------------------------- -->
+      <!-- Left column: structured info -->
+      <!-- ----------------------------- -->
       <div class="contact-info">
-        <h2>Detajet</h2>
         <ul class="info-list">
+
+          <!-- Phone -->
           <li>
-            <span class="label">Telefon:</span>
+            <span class="label">
+              <img src="gallery/tel.svg" alt="">
+            </span>
             <a href="tel:+355693032291">+355 69 303 2291</a>
           </li>
+
+          <!-- Email -->
           <li>
-            <span class="label">Email:</span>
+            <span class="label">
+              <img src="gallery/mail.svg" alt="">
+            </span>
             <a href="mailto:valbonafishta@yahoo.com">valbonafishta@yahoo.com</a>
           </li>
+
+          <!-- Address -->
           <li>
-            <span class="label">Orari:</span>
-            e Hënë – e Premte | 08:00 – 18:00
-          </li>
-          <li>
-            <span class="label">Adresa:</span>
+            <span class="label">
+              <img src="gallery/vendi.svg" alt="">
+            </span>
             Rruga “Myzafer Pipa”, Shkodër, 4001
           </li>
+
+          <!-- Orari (custom spacing + alignment rules applied in CSS) -->
+          <li class="orari-row">
+            <span class="label">
+              <img src="gallery/orari.svg" alt="">
+            </span>
+            Orari është nga e Hëna në të Premte, 08:00 – 18:00.  
+            Jemi të disponueshëm për t’u kontaktuar me telefon gjatë këtij orari.  
+            Me kërkesë, mund të ofrojmë mundësi shtesë për caktimin e takimeve.
+          </li>
+
         </ul>
       </div>
 
-      <!-- Right map -->
+      <!-- ---------------------------- -->
+      <!-- Right column: embedded map  -->
+      <!-- ---------------------------- -->
       <div class="map-section">
-        <h2>Vendndodhja</h2>
         <div class="map-wrap">
           <iframe
             class="map-iframe"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.919948609762!2d19.5069204!3d42.066193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134e01c3d8e94d29%3A0x43a0c9becb2f7f57!2sNotere%20Valbona%20Hajdari%20(Valbona%20Fishta)!5e1!3m2!1sen!2s!4v1762631839177!5m2!1sen!2s"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2962.0200490694406!2d19.504340111542707!3d42.06619695349671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134e01c3d8e94d29%3A0x43a0c9becb2f7f57!2sNotere%20Valbona%20Hajdari%20(Valbona%20Fishta)!5e0!3m2!1sen!2s!4v1762704086190!5m2!1sen!2s"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>
+
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer" id="kontakt">
-    <p>
-      <a href="tel:+355693032291">TEL: +355 69 303 2291</a> |
-      <a href="mailto:valbonafishta@yahoo.com">EMAIL: VALBONAFISHTA@YAHOO.COM</a>
-    </p>
+  <!-- --------------------------- -->
+  <!-- FOOTER: legal + base info   -->
+  <!-- --------------------------- -->
+  <footer class="footer">
+    <p class="address">Shkodër, Rruga “Myzafer Pipa”, Nr. 175, 4001</p>
     <p>&copy; 2025 Notere Valbona Hajdari</p>
   </footer>
+
 </body>
 </html>
