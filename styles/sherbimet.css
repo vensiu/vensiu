@@ -1,0 +1,35 @@
+/* -------------------- */
+/* PDF Layout */
+/* -------------------- */
+
+.pdf-page {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Default (desktop & tablet) */
+.pdf-page iframe {
+  display: block;
+  width: 100%;
+  height: calc(100vh - var(--topbar-h) - var(--nav-h));
+  border: 0;
+}
+
+/* ----------------------- */
+/* Mobile Adaptation Layer */
+/* ----------------------- */
+
+@media (max-width: 768px) {
+  .pdf-page iframe {
+    /* Mobile browsers have dynamic toolbars */
+    height: calc(100svh - var(--topbar-h) - var(--nav-h));
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+  .pdf-page iframe {
+    height: calc(100svh - var(--topbar-h) - var(--nav-h));
+  }
+}
