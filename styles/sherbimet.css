@@ -33,3 +33,34 @@
     height: calc(100svh - var(--topbar-h) - var(--nav-h));
   }
 }
+
+
+/* Download button (hidden by default) */
+.pdf-download-btn {
+  display: none;
+  text-align: center;
+  padding: 14px 20px;
+  margin: 40px auto;
+  width: fit-content;
+  background: #cbb77d;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* ----------------------- */
+/* Mobile Behavior         */
+/* ----------------------- */
+
+@media (max-width: 768px) {
+
+  .pdf-page iframe {
+    display: none;
+  }
+
+  .pdf-download-btn {
+    display: block;
+  }
+
+}
